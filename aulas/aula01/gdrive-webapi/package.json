@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "mkdir -p downloads && node src/index.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand",
-    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
-    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
+    "test:cov": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage"
   },
   "keywords": [],
   "author": "luizjarduli",
@@ -17,6 +17,7 @@
     "jest": "^27.1.0"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "pino": "6.8",
     "pino-pretty": "5.1",
     "pretty-bytes": "5.6",
